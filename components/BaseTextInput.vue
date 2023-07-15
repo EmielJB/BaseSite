@@ -1,25 +1,26 @@
 <template>
-  <div>
+  <div class="w-full h-20">
       <client-only>
           <input 
               :placeholder="placeholder"
               :maxlength="max"
               class="
                   w-full
-                  bg-white
+                  bg-teal-100
                   text-gray-800
                   border
                   text-sm
-                  border-[#EFF0EB]
+                  border-teal-200
                   rounded-lg
                   p-3
-                  placeholder-gray-500
+                  placeholder-gray-700
                   focus:outline-none
+                  shadow-lg
               " 
               @focus="isFocused = true"
               @blur="isFocused = false"
               :class="
-                  {'border-gray-900': isFocused},
+                  {'border-teal-900': isFocused},
                   {'border-red-500': error}
               "
               :type="inputType"
@@ -27,8 +28,8 @@
               autocomplete="off"
           >
       </client-only>
-      <span v-if="error" class="text-red-500 text-[14px] font-semibold">
-          {{ error }}
+      <span v-if="error" class="text-red-500 flex items-center mt-2 ml-3 text-[14px] font-semibold">
+        <Icon name="carbon:warning" size="16" class="mr-2"/>{{ error }}
       </span>
   </div>
                   

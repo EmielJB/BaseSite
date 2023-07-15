@@ -1,7 +1,10 @@
 <template>
-  <div class="flex space-y-6 flex-col text-teal-600/90 justify-center items-center w-full h-screen">
+  <div class="flex flex-col text-teal-600/90 w-full h-screen">
     <TheHeaderFrontEnd/>
-    <slot />
+    <div class="flex space-y-6 flex-col justify-center items-center flex-grow">
+      <slot />
+    </div>
+    
   </div>
 </template>
 

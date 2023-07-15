@@ -15,6 +15,10 @@ pnpm install
 
 # yarn
 yarn install
+
+yarn prisma init
+
+yarn prisma migrate dev --name init
 ```
 
 ## Development Server
